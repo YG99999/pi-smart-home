@@ -79,7 +79,8 @@ header {
   text-align: center;
   min-height: 60vh;
   padding: 2rem 1rem;
-  background: url('images/hero.png') center/cover no-repeat;
+  /* Reference the hero image from the repository root instead of the old images/ directory */
+  background: url('hero.png') center/cover no-repeat;
   color: #fff;
   position: relative;
 }
