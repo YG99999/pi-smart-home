@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog &amp; Updates | Pi Smart Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">Pi Smart Home</a>
+      <nav>
+        <a href="tutorials.html">Tutorials</a>
+        <a href="gear.html">Gear &amp; Tools</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <h2>Blog &amp; Updates</h2>
+
+    <div class="post">
+      <h3>Securing Your Raspberry Pi</h3>
+      <small>April&nbsp;2025</small>
+      <p>Before connecting your Pi to the wider internet, it's important to lock it down. Always keep your system up to date by running <code>sudo apt-get update &amp;&amp; sudo apt-get full-upgrade</code> regularly to ensure you have the latest security patches. Change the default password using <code>passwd</code> and consider creating a new user with sudo privileges then removing the default <code>pi</code> account.</p>
+      <p>Set up a firewall such as UFW (<code>sudo apt install ufw</code>) and only allow the services you need, e.g. <code>sudo ufw allow 22</code> for SSH. For remote access, use SSH keys instead of passwords and disable password login. These simple steps drastically reduce the attack surface of your device.</p>
+    </div>
+
+    <div class="post">
+      <h3>Why Run Home Assistant on a Pi?</h3>
+      <small>June&nbsp;2025</small>
+      <p>Home Assistant is a powerful platform that brings all of your smart devices under one roof. Running it on a dedicated Raspberry Pi is inexpensive and energy‑efficient. You need a Pi 4 or 5 with at least 2 GB RAM, a 32 GB microSD card and a good power supply. After flashing the Home Assistant OS using the Pi Imager, the system boots directly into the Home Assistant interface within a few minutes.</p>
+      <p>Once installed, Home Assistant can integrate lights, sensors, cameras and voice assistants. You can create automations such as turning on lights when someone arrives home or sending alerts when humidity drops. Combined with the tutorials on this site, you'll be able to read sensor data, switch appliances with relays and tie everything together in a unified dashboard.</p>
+    </div>
+
+    <div class="post">
+      <h3>Project Ideas for Your Smart Home</h3>
+      <small>July&nbsp;2025</small>
+      <p>Looking for inspiration? Here are a few starter projects:</p>
+      <ul>
+        <li>Automated plant watering: Use a relay to control a small pump and a moisture sensor to detect when soil dries out.</li>
+        <li>Environmental monitor: Combine DHT22 sensors with a gas sensor to monitor indoor air quality and trigger fans or notifications.</li>
+        <li>Energy‑saving lights: Use motion sensors and Home Assistant automations to turn lights off when no one is around.</li>
+      </ul>
+      <p>If you'd like to share your own project, feel free to <a href="mailto:info@pisnarthome.local">contact us</a> and we may feature it in an upcoming post.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <script>document.write(new Date().getFullYear());</script> Pi Smart Home.</p>
+  </footer>
+</body>
+</html>

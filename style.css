@@ -1,0 +1,221 @@
+/*
+  Global stylesheet for the Raspberry Pi smart home hack site.
+
+  This file defines a light, clean look that works well on mobile
+  and desktop screens. Components are flexbox based to allow
+  responsive behaviour.  Colour choices were kept subtle to
+  emphasise content.  CTA buttons use a primary colour to draw
+  attention.
+*/
+
+/* Reset some defaults */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fdfdfd;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation bar */
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+.navbar a.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #d32f2f;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar nav a {
+  padding: 0.5rem 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar nav a:hover {
+  color: #d32f2f;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
+  padding: 2rem 1rem;
+  background: url('images/hero.png') center/cover no-repeat;
+  color: #fff;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #d32f2f;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #a31818;
+}
+
+/* Section styling */
+section {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #d32f2f;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* Blog posts */
+.post {
+  margin-bottom: 2rem;
+}
+
+.post h3 {
+  margin-bottom: 0.5rem;
+  color: #d32f2f;
+}
+
+.post small {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+footer {
+  background-color: #f3f3f3;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+footer a {
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 0.95rem;
+  }
+}
